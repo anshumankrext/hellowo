@@ -28,4 +28,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Deploy New Code
-      run: sudo java -jar /home/ubuntu/actions-runner/_work/hellowo/hellowo/target/com.ameyrupji.helloworld-1.0-SNAPSHOT.jar
+      run: sudo java -jar /home/ubuntu/actions-runner/_work/hellowo/hellowo/target/com.ameyrupji.helloworld-1.0-SNAPSHOT.jar &
