@@ -27,6 +27,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Deploy the server
-      run: sudo kill -9 `sudo lsof -t -i:8080` & sudo java - jar /home/ubuntu/actions-runner/_work/hellowo/hellowo/target/com.ameyrupji.helloworld-1.0-SNAPSHOT.jar &
-      
+    - name: Stopping Existing Server
+      run: sudo kill -9 `sudo lsof -t -i:8080`
+    - name: Deploy New Code
+      run: sudo java - jar /home/ubuntu/actions-runner/_work/hellowo/hellowo/target/com.ameyrupji.helloworld-1.0-SNAPSHOT.jar
