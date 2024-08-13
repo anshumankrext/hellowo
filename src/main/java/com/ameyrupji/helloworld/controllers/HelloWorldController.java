@@ -11,6 +11,6 @@ public class HelloWorldController {
 
     @GetMapping(value = "/")
     public String get() {
-        return "i love you Rahul!";
+        return "Hello Amit!";
     }
 }
